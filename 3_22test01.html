@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="vue_one">
+			<h1>内容：{{message}}<small>{{results}}</small></h1>
+			<h2 v-if="results>=90 && results<=100">你很优秀</h2>
+			<h2 v-if="results>=80 && results<90">你很不错</h2>
+			<h2 v-if="results>=70 && results<80 ">你加油</h2>
+			<h2 v-if="results>=60 && results<70 ">嗯，没事多打码</h2>
+			<h2 v-if="results<60 ">你去搬砖吧</h2>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el : '#vue_one',
+				data: {
+					message: "我的VUE成绩是：",
+					results: "89"
+				}
+			})
+		</script>
+	</body>
+</html>
